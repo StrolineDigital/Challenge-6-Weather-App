@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/style.css" />
+    
+    <title>Sublime Weather</title>
+  </head>
+  <body>
+    <h1>The Sublime Weather App</h1>
+    <img src="./assets/images/Sublime sun icon.png" alt="sun icon" />
+    <div class="container">
+      <div class="weather-input">
+        <h3>Enter a City Name</h3>
+        <input
+          class="city-input"
+          type="text"
+          placeholder="Long Beach, CA"
+        />
+        <button class="search-btn main-btn">Search</button>
+        <div class="separator"></div>
+
+        <button id="recent-srch" class="main-btn">Recent Searches</button> 
+        <div class="history-container"></div>
+      </div>
+      <div class="weather-data">
+        <div class="current-weather">
+          <div class="details">
+             <h2> _________ (_________)</h2>
+             <h4>Temp: __ °F</h4>
+             <h4>Wind: __ MPH</h4>
+             <h4>Humidity: __ %</h4>
+          </div>
+          </div>
+        </div>
+        <div class="days-forecast">
+          <h2>5-Day Forecast</h2>
+          <ul class="weather-cards">
+            <li class="card">
+              <h3>( _________ )</h3>
+              <h4>Temp: __ °F</h4>
+              <h4>Wind: __ MPH</h4>
+              <h4>Humidity: __ %</h4>
+            </li>
+            <li class="card">
+              <h3>( _________ )</h3>
+              <h4>Temp: __ °F</h4>
+              <h4>Wind: __ MPH</h4>
+              <h4>Humidity: __ %</h4>
+            </li>
+            <li class="card">
+              <h3>( _________ )</h3>
+              <h4>Temp: __ °F</h4>
+              <h4>Wind: __ MPH</h4>
+              <h4>Humidity: __ %</h4>
+            </li>
+            <li class="card">
+              <h3>( _________ )</h3>
+              <h4>Temp: __ °F</h4>
+              <h4>Wind: __ MPH</h4>
+              <h4>Humidity: __ %</h4>
+            </li>
+            <li class="card">
+              <h3>( _________ )</h3>
+              <h4>Temp: __ °F</h4>
+              <h4>Wind: __ MPH</h4>
+              <h4>Humidity: __ %</h4>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
