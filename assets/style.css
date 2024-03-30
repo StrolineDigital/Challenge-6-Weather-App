@@ -18,11 +18,12 @@ body {
 }
 
 h1 {
-    background: #4a67dc;
+    background: #08834c;
     font-size: 1.80rem;
     color: white;
     text-align: center;
     padding: 20px 0;
+    font-family: "Pacifico", cursive;
 }
 
 .container {
@@ -34,6 +35,10 @@ h1 {
 
 .weather-input {
     width: 550px;
+}
+
+#city-name { 
+    font-family: "Pacifico", cursive;   
 }
 
 .weather-input input {
@@ -56,7 +61,7 @@ h1 {
     outline: black 2px;
     font-size: 1rem;
     color: #fff;
-    background: #4a67dc;
+    background: #08834c;
 }
 
 .history-container {
@@ -103,7 +108,7 @@ h1 {
 }
 
 .current-weather {
-    background: #4a67dc;
+    background: #08834c;
     color: #fff;
     display: flex;
     justify-content: space-between;
