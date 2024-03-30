@@ -25,7 +25,7 @@ for (let i = 0; i < searchHistory.length; i++) {
 }
 // Function to convert date string to day of the week or "Today"
 const getDayOfWeek = (dateString) => {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const date = new Date(dateString);
     const today = new Date();
     const dayOfWeek = date.getDay();
@@ -37,14 +37,16 @@ const getDayOfWeek = (dateString) => {
   // Modified createWeatherCard function
   const createWeatherCard = (cityName, weatherItem, index) => {
     const dayOfWeek = getDayOfWeek(weatherItem.dt_txt);
+    const temperature = Math.round(weatherItem.main.temp); // Round temperature to nearest whole number
+  const humidity = Math.round(weatherItem.main.humidity); // Round humidity to nearest whole number
+  const wind = Math.round(weatherItem.wind.speed); // Round wind speed to nearest whole number
+
     if (index === 0) {
       return ` <div class="details">
-                   <h2>${cityName} (${dayOfWeek})</h2>
-               <h4>Temperature: ${(weatherItem.main.temp).toFixed(
-                 3
-               )}°F</h4>
-               <h4>Wind: ${weatherItem.wind.speed} MPH</h4>
-               <h4> Humidity: ${weatherItem.main.humidity} %</h4>
+                   <h2>${cityName} ${dayOfWeek}</h2>
+                   <h4>Temperature: ${temperature}°F</h4>
+                              <h4>Wind: <br>${wind} MPH</h4>
+               <h4> Humidity: <br> ${humidity} %</h4>
           </div>
           <div class="icon">
           <img src="https://openweathermap.org/img/wn/${
@@ -54,13 +56,13 @@ const getDayOfWeek = (dateString) => {
           </div>`;
     } else {
       return `<li class="card">
-                <h3>(${dayOfWeek})</h3>
+                <h3>${dayOfWeek}</h3>
                <img src="https://openweathermap.org/img/wn/${
                  weatherItem.weather[0].icon
                }@2x.png" alt="weather-icon"/>
-               <h4>Temp: ${(weatherItem.main.temp).toFixed(3)} °F</h4>
-               <h4>Wind: ${weatherItem.wind.speed} MPH</h4>
-               <h4> Humidity: ${weatherItem.main.humidity} %</h4>
+               <h4>Temperature: ${temperature}°F</h4>
+               <h4>Wind:<br> ${wind} MPH</h4>
+               <h4> Humidity: <br> ${humidity} %</h4>
             </li>`;
     }
   };
