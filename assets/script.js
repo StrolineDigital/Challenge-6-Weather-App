@@ -74,7 +74,7 @@ const getDayOfWeek = (dateString) => {
 
 //Makes a call to the OpenWeatherMap API to get the weather details.
 const getWeatherDetails = (cityName, lat, lon) => {
-  const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
+  const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
 // Fetches the weather data from the API, then converts the response to JSON, and then displays the weather data on the page.
   fetch(WEATHER_API_URL)
     .then((res) => res.json())
