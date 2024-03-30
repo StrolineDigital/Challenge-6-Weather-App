@@ -151,10 +151,13 @@ function handleInputChange(event) {
 }
 // Event listener for the search button
 searchButton.addEventListener("click", () => {
-  const cityName = cityInput.value.trim(); // Removes any whitespace from the input.
-  if (!cityName) return; // If the user does not enter a city name, the function will return.
-  getCityCoordinates(cityName);
-  storage(cityName);
+    const cityName = cityInput.value.trim(); // Removes any whitespace from the input.
+    if (!cityName) {
+        alert("City name not found! Please enter a valid city name.");
+        return;
+    }
+    getCityCoordinates(cityName);
+    storage(cityName);
 });
 
 // Event listener for the search history buttons
